@@ -1,0 +1,90 @@
+.main-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 420px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #030310;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .description {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0E0E10;
+    }
+
+    p {
+      color: #1f1f23;
+      font-weight: 400;
+    }
+
+    p + p {
+      margin-top: 10px;
+    }
+  }
+
+  .fields-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    .fields-container {
+      width: 100%;
+
+      .field {
+        height: 60px;
+        width: 60px;
+        text-align: center;
+      }
+    }
+
+    .button-wrapper {
+      width: 100%;
+      text-align: right;
+
+      .button {
+        margin-top: 20px;
+        background-color: #9147FF;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: rgba(0, 0, 0, 0.05);
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  .purple-text {
+    color: #5C16C5;
+    font-size: 13px;
+    display: block;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+}

@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+html {
+  flex-basis: auto;
+}
+
+html,
+body {
+  height: 100%;
+  letter-spacing: 0px;
+  flex-basis: auto;
+  background: #f0f0f0 0% 0% no-repeat padding-box;
+  overflow-x: hidden;
+  font-family: "Inter";
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter" !important;
+  margin: 0;
+}
+
+p, span, button {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter";
+}
+
+$fc-primary: mat.define-palette(mat.$indigo-palette);
+$fc-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$fc-warn: mat.define-palette(mat.$red-palette);
+
+$fc-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $fc-primary,
+      accent: $fc-accent,
+      warn: $fc-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($fc-theme);
